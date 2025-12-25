@@ -1,4 +1,3 @@
-import React from 'react'
 import { HiMail } from "react-icons/hi";
 import { MdCallEnd } from "react-icons/md";
 
@@ -70,3 +69,4 @@ const Footer = () => {
 }
 
 export default Footer
+
