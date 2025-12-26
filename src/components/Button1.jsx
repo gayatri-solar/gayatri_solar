@@ -9,7 +9,7 @@ function Button1({ text, onClick, className = "" }) {
         border-2 border-lime-900
         bg-lime-500
         px-8 py-3
-        text-lg font-bold text-lime-950
+        text-base font-semibold text-lime-950
         transition-all duration-200 ease-in-out
 
         after:absolute after:inset-0
