@@ -13,31 +13,31 @@ import Calculator from './components/Calculator'
 import SubmitPopup from './components/SubmitPopup'
 
 function App() {
-  const menu = ["Home", "About", "Services", "Projects","Calculator", "Contact"];
+  const menu = ["Home", "About", "Services", "Projects", "Calculator", "Contact"];
   const heroRef = useRef(null);
-  const [isOpen,setIsOpen]= useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showpopup, setShowpopup] = useState(false);
- useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      setShowMenu(!entry.isIntersecting);
-    },
-    {
-      threshold: 0.25,
-    }
-  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowMenu(!entry.isIntersecting);
+      },
+      {
+        threshold: 0.25,
+      }
+    );
 
-  if (heroRef.current) observer.observe(heroRef.current);
+    if (heroRef.current) observer.observe(heroRef.current);
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className='overflow-x-hidden scroll-smooth'>
-
-      <Hero menu={menu} heroRef={heroRef} isOpen={isOpen} setIsOpen={setIsOpen} /> 
-      <Aboutus/>
+      
+      <Hero menu={menu} heroRef={heroRef} isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Aboutus />
       <Partners />
       <Services />
       {isOpen ? "" : <Wp />}
@@ -49,7 +49,7 @@ function App() {
       {showpopup && <SubmitPopup setShowpopup={setShowpopup} />}
       <Footer />
     </div>
-    
+
   )
 }
 

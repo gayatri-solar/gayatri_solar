@@ -3,6 +3,7 @@ import { MdCall } from "react-icons/md";
 import { HiOfficeBuilding } from "react-icons/hi";
 import { MdLocalPostOffice } from "react-icons/md";
 import { HiMiniBuildingOffice } from "react-icons/hi2";
+import SEO from "../components/SEO";
 const Contact = ({ setShowpopup }) => {
   const dets = [{
     icon: <MdCall className='m-4 text-lime-600' />,
@@ -30,6 +31,7 @@ const Contact = ({ setShowpopup }) => {
   return (
     <div className='bg-white p-8 '>
       <h1 className="text-lime-600 mb-5 lg:text-5xl text-3xl">Contact Now</h1>
+      <SEO title="Gayatri Solar" description="Reach out to Gayatri Solar Nashik for all your solar energy needs. Contact us via phone, email, or visit our office for expert assistance and inquiries." />
       <div id='Contact' className="lg:flex lg:flex-row" >
         <div >
           <div className=' grid grid-cols-2 gap-1 lg:gap-4 lg:pr-8 lg:h-full '>

@@ -3,6 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import SEO from "./SEO";
 
 const Projects = () => {
   const modules = import.meta.glob("../assets/Projects/*", {
@@ -17,6 +18,7 @@ const Projects = () => {
         id="Projects"
         className="bg-white p-8"
       >
+        <SEO title="Gayatri Solar" description="Explore Gayatri Solar Nashik's diverse portfolio of solar projects, showcasing our expertise in residential, commercial, industrial, and agricultural solar installations. Discover how we deliver sustainable energy solutions tailored to various needs." />
         <h2 className="text-lime-600 mb-5 text-3xl lg:text-5xl">
           Our Projects
         </h2>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PiSolarPanel } from "react-icons/pi";
 import { MdOutlineCalculate } from "react-icons/md";
 import { FaClockRotateLeft } from "react-icons/fa6";
+import SEO from "../components/SEO";
 
 export default function EnergyCalculator() {
     const [bill, setBill] = useState();
@@ -12,6 +13,9 @@ export default function EnergyCalculator() {
 
     return (
         <div id="Calculator" className="p-8 flex justify-between flex-col lg:flex-row gap-6 bg-white ">
+            <SEO title="Gayatri Solar"
+                 description="Use our Energy Calculator to get a quick estimate of your solar energy requirements, costs, and payback period based on your current electricity bill." 
+            />
 
             {/* Left Section */}
             <div>

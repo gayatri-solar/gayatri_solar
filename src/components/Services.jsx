@@ -1,6 +1,7 @@
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import SEO from "./SEO"
 
 // Swiper styles
 import "swiper/css";
@@ -42,6 +43,7 @@ const Services = () => {
 
   return (
     <div id="Services" className="bg-white p-8 ">
+      <SEO title="Gayatri Solar" description="Explore our range of solar services including Residential, Commercial, Industrial, Agricultural Solar, Solar Lamps, and Water Solar solutions designed to meet your energy needs sustainably." />
       <h1 className="text-lime-600 mb-5 lg:text-5xl text-3xl">
         Our Services
       </h1>
