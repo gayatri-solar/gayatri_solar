@@ -9,7 +9,8 @@ export default function EnergyCalculator() {
 
     const plantCapacity = (bill * 0.001).toFixed(3); // kW
     const estimatedCost = Math.round(bill * 65); // Rs
-    const paybackMonths = Math.ceil(estimatedCost / bill /12); // Months
+    const paybackYears = estimatedCost / bill / 12; // Years
+    const paybackMonths = paybackYears.toFixed(2)
 
     return (
         <div id="Calculator" className="p-8 flex justify-between flex-col lg:flex-row gap-6 bg-white ">

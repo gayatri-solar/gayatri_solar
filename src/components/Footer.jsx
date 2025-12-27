@@ -16,19 +16,19 @@ const Footer = () => {
         { name: "youtube", Icon: FaYoutube, color : "#FF0000" },
     ];
     return (
-        <div className='bg-lime-600 text-white py-10'>
+        <div className='bg-lime-600 text-white py-8 text-center'>
             <div className='flex-col flex items-start justify-center lg:flex-row-reverse'>
                 <div className='flex flex-col lg:flex-row text-white'>
                     <div className="flex">
                         <div onClick={() => {
                         window.location.href = "tel:+919075321764";
-                    }} className=" text-base mb-2 ml-8 cursor-pointer flex items-center gap-2 uppercase">
+                    }} className=" text-sm lg:text-lg mb-2 ml-8 cursor-pointer flex items-center gap-2 uppercase">
                         <MdCallEnd className='text-white' />
                         +91-9075321764
                     </div>
                     <div onClick={() => {
                         window.location.href = "tel:+919764004271";
-                    }} className="text-base mb-2 ml-8 cursor-pointer flex items-center gap-2 uppercase">
+                    }} className="text-sm lg:text-lg mb-2 ml-8 cursor-pointer flex items-center gap-2 uppercase">
                         <MdCallEnd className='text-white' />
                         +91-9764004271
                     </div>
@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
                 <h1 onClick={() => {
                     window.location.href = "mailto:gayatrienergynsk@gmail.com";
-                }} className=" text-lg mb-2 ml-8 cursor-pointer flex items-center gap-2 uppercase" >
+                }} className="mb-2 lg:text-lg ml-8 cursor-pointer flex items-center gap-2 uppercase" >
                     <HiMail className='text-white' />
                     gayatrienergynsk@gmail.com </h1>
             </div>
@@ -50,8 +50,9 @@ const Footer = () => {
                     </div>
                 ))}
             </div>
-            <div className=' flex flex-col justify-center items-center text-white'>
-                <h3>Copyright © 2026 Gayatri Solar. All Rights Reserved.</h3>
+            <div className=' flex flex-col justify-center items-center text-white text-center lg:pt-0 pt-4'>
+                <h3 className="hidden lg:block">Copyright © 2026 Gayatri Solar. All Rights Reserved.</h3>
+                <h3 className=" lg:hidden ">Copyright © 2026 Gayatri Solar. <br /> All Rights Reserved.</h3>
                     <h3> 
                         <a href="https://api.whatsapp.com/send/?phone=917448046577&text&type=phone_number&app_absent=0">Designed by Mayur Kumawat.</a>
                     </h3>
