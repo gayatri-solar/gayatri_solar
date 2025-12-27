@@ -24,7 +24,7 @@ const Navbar = ({ menu, isOpen, setIsOpen }) => {
   };
   return (
     <>
-      <div className="bg-white flex justify-between items-center text-black px-2 py-3 lg:py-0 lg:px-8 font-bold relative">
+      <div className="bg-lime-50 lg:bg-white flex justify-between items-center text-black px-2 py-3 lg:py-0 lg:px-8 font-bold relative">
         <div className="flex justify-center items-center">
           <img className="hidden lg:block w-48 lg:w-72" src={logo} alt="Gayatri Solar Logo" />
           <img className="w-12 lg:hidden" src={logosm} alt="Gayatri Solar Logo" />
