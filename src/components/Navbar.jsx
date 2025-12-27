@@ -51,7 +51,7 @@ const Navbar = ({ menu, isOpen, setIsOpen }) => {
           </div>
           <div className=" hover:text-lime-600 flex items-center gap-1 text-sm">
             <IoLocationSharp className="inline" />
-            <p>Nashik, Maharashtra.</p>
+            <p>Nashik Maharashtra</p>
           </div>
         </div>
         <div className="flex justify-center items-center">
