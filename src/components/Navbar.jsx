@@ -7,6 +7,7 @@ import logosm from "../assets/android-chrome-512x512.png";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
+import { IoIosSearch } from "react-icons/io";
 import {
   FaFacebookF,
   FaInstagram,
@@ -97,6 +98,11 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
             <IoLocationSharp className="inline text-red-600 " />
             <p>Nashik, Maharashtra</p>
           </div>
+        </div>
+        <div className="hidden lg:block relative h-8 w-56 ">
+              <IoIosSearch onClick={()=>{ handleScroll("Contact")}} className="absolute right-2 text-2xl mt-1 cursor-pointer " />
+              <input placeholder="Search" type="text" className="h-full w-full bg-white pl-3 border rounded-full focus:outline-0"/>
+
         </div>
         <div className="flex justify-center items-center">
           <Button1 onClick={() => {
