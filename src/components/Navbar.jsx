@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import Button1 from "./Button1";
 import { TbMenuDeep } from "react-icons/tb";
 import Smenu from "./Smenu";
@@ -35,6 +35,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
       behavior: "smooth"
     });
   };
+  const [search, setSearch] = useState("");
   return (
     <div className={`${className}`} >
       <div className="hidden lg:flex lg:items-center lg:justify-between bg-lime-600 text-white py-1 px-8">
@@ -62,7 +63,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
           {socials.map(({ name, Icon, color }) => (
             <div
               key={name}
-              className="p-1 lg:text-xl rounded-sm cursor-pointer transition bg-white"
+              className="p-1 lg:text-xl rounded-sm cursor-pointer transition bg-lime-50 hover:scale-[1.1]"
             >
               <Icon color={color} />
             </div>
@@ -101,7 +102,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
         </div>
         <div className="hidden lg:block relative h-8 w-56 ">
               <IoIosSearch onClick={()=>{ handleScroll("Contact")}} className="absolute right-2 text-2xl mt-1 cursor-pointer " />
-              <input placeholder="Search" type="text" className="h-full w-full bg-white pl-3 border rounded-full focus:outline-0"/>
+              <input onKeyDown={(dets)=>{console.log(dets.key === "Enter" ? handleScroll("Contact") : null );}} onChange={(dets)=>{ setSearch(dets.target.value) }} value={search} placeholder="Search" type="text" className="h-full w-full bg-white pl-3 font-medium border rounded-full focus:outline-0"/>
 
         </div>
         <div className="flex justify-center items-center">
