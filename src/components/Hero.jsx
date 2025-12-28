@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './Navbar'
 import HeroLeft from './HeroLeft'
 import Smenu from './Smenu'
@@ -11,7 +10,7 @@ const Hero = ({ menu, heroRef, isOpen, setIsOpen }) => {
     <div
       id="Home"
       ref={heroRef}
-      className="hero-bg relative  h-screen bg-cover bg-right"
+      className="hero-bg relative h-screen bg-cover bg-right"
       style={{
         backgroundImage: `url("https://images.unsplash.com/photo-1705579606211-88640600fcdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c29sYXIlMjBwYW5lbCUyMHdvcmtlcnxlbnwwfDF8MHx8fDI%3D")`
       }}
@@ -25,9 +24,9 @@ const Hero = ({ menu, heroRef, isOpen, setIsOpen }) => {
       ></div>
 
       <div className="absolute inset-0 bg-linear-to-b from-black/50 to-black/20 lg:bg-black/50 text-white">
-        <Navbar menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Navbar menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} className="lg:hidden" />
 
-        <div className="flex flex-col lg:flex-row items-center justify-center px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:pt-32 px-8">
           <HeroLeft />
         </div>
 

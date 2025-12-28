@@ -60,6 +60,28 @@
 .hero-bg{
     background-image: url("./assets/bg/What-are-the-Benefits-of-Solar-Panel-Installation.jpg");
 }
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('https://stutitechnologies.com/assets/fonts/fontawesome-webfont.eot?v=4.7.0') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fontawesome {
+  font-family: 'FontAwesome', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+@font-face {
+  font-family: 'Livvic';
+  src: url('http://fonts.gstatic.com/s/livvic/v11/rnCr-x1S2hzjrlfXbeM-.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.livvic {
+  font-family: 'Livvic', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
 
 @keyframes pulse-border {

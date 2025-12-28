@@ -3,13 +3,25 @@ import Button1 from "./Button1";
 import { TbMenuDeep } from "react-icons/tb";
 import Smenu from "./Smenu";
 import logo from "../assets/logo.png";
-import logosm from "../assets/favicon.png";
+import logosm from "../assets/android-chrome-512x512.png";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
+import { HiMail } from "react-icons/hi";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 
-const Navbar = ({ menu, isOpen, setIsOpen }) => {
-
+const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
+  const socials = [
+    { name: "facebook", Icon: FaFacebookF, color: "#1877F2" },
+    { name: "instagram", Icon: FaInstagram, color: "#E4405F" },
+    { name: "whatsapp", Icon: FaWhatsapp, color: "#25D366" },
+    { name: "youtube", Icon: FaYoutube, color: "#FF0000" },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -23,9 +35,41 @@ const Navbar = ({ menu, isOpen, setIsOpen }) => {
     });
   };
   return (
-    <>
+    <div className={`${className}`} >
+      <div className="hidden lg:flex lg:items-center lg:justify-between bg-lime-600 text-white py-1 px-8">
+        <div className="flex gap-4">
+          <div className=" flex items-center gap-1 uppercase cursor-pointer">
+            <HiMail className="inline mt-1"
+              onClick={() => {
+                window.location.href = "mailto:Gayatrienergynsk@gmail.com";
+              }} />
+            <p>Gayatrienergynsk@gmail.com</p>
+          </div>
+          <div className="flex items-center gap-1 cursor-pointer">
+            <MdLocalPhone className="inline mt-1"
+              onClick={() => {
+                window.location.href = "tel:+919075321764";
+              }} />
+            <p>+91-9075321764</p>
+          </div>
+          <div className=" flex items-center gap-1 cursor-pointer">
+            <IoLocationSharp className="inline mt-1" />
+            <p>Nashik, Maharashtra</p>
+          </div>
+        </div>
+        <div className="flex gap-5">
+          {socials.map(({ name, Icon, color }) => (
+            <div
+              key={name}
+              className="p-1 lg:text-xl rounded-sm cursor-pointer transition bg-white"
+            >
+              <Icon color={color} />
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="bg-lime-50 lg:bg-white flex justify-between items-center text-black px-2 py-3 lg:py-0 lg:px-8 font-bold relative">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center cursor-pointer">
           <img className="hidden lg:block w-48 lg:w-72" src={logo} alt="Gayatri Solar Logo" />
           <img className="w-12 lg:hidden" src={logosm} alt="Gayatri Solar Logo" />
         </div>
@@ -41,7 +85,7 @@ const Navbar = ({ menu, isOpen, setIsOpen }) => {
           ))}
 
         </ul>
-        <div className="cursor-pointer text-lime-900 text-nowrap">
+        <div className="cursor-pointer text-lime-900 text-nowrap lg:hidden">
           <div className=" hover:text-lime-600 flex items-center gap-1 text-[4vw] lg:text-lg">
             <MdLocalPhone className="inline"
               onClick={() => {
@@ -65,7 +109,7 @@ const Navbar = ({ menu, isOpen, setIsOpen }) => {
       </div>
       <Smenu menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} />
 
-    </>
+    </div>
   );
 };
 
