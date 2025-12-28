@@ -16,7 +16,7 @@ const Footer = () => {
         { name: "youtube", Icon: FaYoutube, color : "#FF0000" },
     ];
     return (
-        <div className='bg-lime-600 text-white py-8 text-center'>
+        <div className='bg-blue-400 text-white py-8 text-center'>
             <div className='flex-col flex items-start justify-center lg:flex-row-reverse'>
                 <div className='flex flex-col lg:flex-row text-white'>
                     <div className="flex">
