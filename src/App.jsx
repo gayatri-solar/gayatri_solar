@@ -12,6 +12,7 @@ import Partners from './components/Partners'
 import Calculator from './components/Calculator'
 import SubmitPopup from './components/SubmitPopup'
 import Navbar from './components/Navbar'
+import CallPopup from './components/CallPopup'
 
 function App() {
   const menu = ["Home", "About", "Services", "Projects", "Calculator", "Contact"];
@@ -19,6 +20,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showpopup, setShowpopup] = useState(false);
+  const [showcallpopup, setShowcallpopup] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -33,6 +35,20 @@ function App() {
 
     return () => observer.disconnect();
   }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowcallpopup(true)
+    }, 5000)
+
+    return () => clearTimeout(timer)
+  }, [])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowcallpopup(true)
+    }, 30000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className='overflow-x-hidden scroll-smooth'>
@@ -48,6 +64,7 @@ function App() {
       <Partners />
       <Contact setShowpopup={setShowpopup} />
       {showpopup && <SubmitPopup setShowpopup={setShowpopup} />}
+      {showcallpopup && <CallPopup setShowcallpopup={setShowcallpopup} setShowpopup={setShowpopup} />}
       <Footer />
     </div>
 
