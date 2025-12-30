@@ -63,7 +63,7 @@ const CallPopup = ({ setShowpopup, setShowcallpopup }) => {
                     className='absolute top-3 text-3xl text-gray-600 right-3 lg:text-2xl cursor-pointer'
                 />
 
-                <h3 className='text-2xl font-semibold'>
+                <h3 className=' text-[6vw] lg:text-2xl font-semibold'>
                     Looking for something specific? We’re just a call away.
                 </h3>
 
@@ -101,14 +101,14 @@ const CallPopup = ({ setShowpopup, setShowcallpopup }) => {
                     {loading ? 'Sending...' : 'Request Call'}
                 </button>
 
-                <p className='mt-2'>
+                <p className='mt-2  text-nowrap text-[3.7vw] lg:text-base '>
                     <span className='font-semibold'>In a hurry?</span> Call us now&nbsp;
                     <a className='font-semibold underline' href="tel:+919075321764">
                         +91 9075321764
                     </a>
                 </p>
 
-                <p>
+                <p className=' text-nowrap text-[3.7vw] lg:text-base '>
                     Have a custom requirement?&nbsp;
                     <span
                         onClick={() => handleScroll("Contact")}
