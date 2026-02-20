@@ -2,7 +2,7 @@ import imgs from '../assets/about/img1.jpg';
 import SEO from './SEO';
 const Aboutus = () => {
   return (
-    <div id="About" className=' bg-white p-8 items-center justify-center' >
+    <div id="about" className=' bg-white p-8 items-center justify-center' >
       <SEO title="Gaytri Solar" description="Learn more about Gaytri Solar's commitment to sustainable solar energy solutions for a greener future." />
       <h1 className="text-lime-600 lg:mt-14 mb-5 lg:text-5xl text-3xl">About Us</h1>
       <div className="lg:flex">

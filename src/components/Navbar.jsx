@@ -14,6 +14,7 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
@@ -76,14 +77,15 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
           <img className="w-12 lg:hidden" src={logosm} alt="Gayatri Solar Logo" />
         </div>
         <ul className="hidden lg:flex gap-8 text-base font-semibold px-12">
-          {menu.map((item) => (
-            <li
-              key={item}
-              onClick={() => handleScroll(item)}
+          {menu.map((item,idx) => (
+            <Link key={idx} to={item.path}>
+              <li
+              key={item.name}
               className="cursor-pointer text-lime-900 hover:text-lime-600"
             >
-              {item}
+              {item.name}
             </li>
+            </Link>
           ))}
 
         </ul>
@@ -101,7 +103,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
           </div>
         </div>
         <div className="hidden lg:block relative h-8 w-56 ">
-              <IoIosSearch onClick={()=>{ handleScroll("Contact")}} className="absolute right-2 text-2xl mt-1 cursor-pointer " />
+              <IoIosSearch onClick={()=>{ handleScroll("contact")}} className="absolute right-2 text-2xl mt-1 cursor-pointer " />
               <input onKeyDown={(dets)=>{console.log(dets.key === "Enter" ? handleScroll("Contact") : null );}} onChange={(dets)=>{ setSearch(dets.target.value) }} value={search} placeholder="Search" type="text" className="h-full w-full bg-white pl-3 font-medium border rounded-full focus:outline-0"/>
 
         </div>

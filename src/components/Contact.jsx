@@ -32,7 +32,7 @@ const Contact = ({ setShowpopup }) => {
     <div className='bg-white p-8 '>
       <h1 className="text-lime-600 mb-5 lg:text-5xl text-3xl">Contact Now</h1>
       <SEO title="Gayatri Solar" description="Reach out to Gayatri Solar Nashik for all your solar energy needs. Contact us via phone, email, or visit our office for expert assistance and inquiries." />
-      <div id='Contact' className="lg:flex lg:flex-row" >
+      <div id='contact' className="lg:flex lg:flex-row" >
         <div >
           <div className=' grid grid-cols-2 gap-1 lg:gap-4 lg:pr-8 lg:h-full '>
             {dets.map((det, index) => (

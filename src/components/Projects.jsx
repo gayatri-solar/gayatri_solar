@@ -15,7 +15,7 @@ const Projects = () => {
   return (
     <>
       <section
-        id="Projects"
+        id="projects"
         className="bg-white p-8"
       >
         <SEO title="Gayatri Solar" description="Explore Gayatri Solar Nashik's diverse portfolio of solar projects, showcasing our expertise in residential, commercial, industrial, and agricultural solar installations. Discover how we deliver sustainable energy solutions tailored to various needs." />

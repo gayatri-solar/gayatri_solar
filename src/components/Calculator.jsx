@@ -13,7 +13,7 @@ export default function EnergyCalculator() {
     const paybackMonths = paybackYears.toFixed(2)
 
     return (
-        <div id="Calculator" className="p-8 flex justify-between flex-col lg:flex-row gap-6 bg-white ">
+        <div id="calculator" className="p-8 flex justify-between flex-col lg:flex-row gap-6 bg-white ">
             <SEO title="Gayatri Solar"
                  description="Use our Energy Calculator to get a quick estimate of your solar energy requirements, costs, and payback period based on your current electricity bill." 
             />

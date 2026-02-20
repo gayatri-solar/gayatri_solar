@@ -6,15 +6,16 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdCallEnd } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const Smenu = ({ menu, isOpen, setIsOpen }) => {
 
   const socials = [
-    { name: "facebook", Icon: FaFacebookF, color: "#1877F2",link:"https://www.facebook.com/profile.php?id=61585281819822&sk=about_details" },
-    { name: "instagram", Icon: FaInstagram, color: "#E4405F",link:"https://www.instagram.com/gayatrienergynsk/" },
-    { name: "whatsapp", Icon: FaWhatsapp, color: "#25D366", link:'https://wa.me/919075321764' },
-    { name: "youtube", Icon: FaYoutube, color: "#FF0000", link:"https://www.youtube.com/@solarenergynsk" },
+    { name: "facebook", Icon: FaFacebookF, color: "#1877F2", link: "https://www.facebook.com/profile.php?id=61585281819822&sk=about_details" },
+    { name: "instagram", Icon: FaInstagram, color: "#E4405F", link: "https://www.instagram.com/gayatrienergynsk/" },
+    { name: "whatsapp", Icon: FaWhatsapp, color: "#25D366", link: 'https://wa.me/919075321764' },
+    { name: "youtube", Icon: FaYoutube, color: "#FF0000", link: "https://www.youtube.com/@solarenergynsk" },
   ];
 
   const handleclose = () => {
@@ -39,7 +40,11 @@ const Smenu = ({ menu, isOpen, setIsOpen }) => {
         <div className="flex flex-col justify-between h-[88vh] ">
           <ul>
             {menu.map((item, idx) => (
-              <li key={idx} onClick={() => setIsOpen(false)} className="mx-8 my-6 text-3xl lg:text-2xl active:scale-105 lg:active:scale-100 text-"><a href={`#${item}`}>{item}</a></li>
+              <li key={idx} onClick={() => setIsOpen(false)} className="mx-8 my-6 text-3xl lg:text-2xl active:scale-105 lg:active:scale-100">
+                <Link to={item.path}>
+                  {item.name}
+                </Link>
+              </li>
             ))}
           </ul>
           <div>
@@ -59,7 +64,7 @@ const Smenu = ({ menu, isOpen, setIsOpen }) => {
             <div className="flex gap-5 ml-8 mb-20">
               {socials.map(({ name, Icon, color, link }) => (
                 <div
-                  key={name} onClick={()=>(window.open(link , "_blank"))}
+                  key={name} onClick={() => (window.open(link, "_blank"))}
                   className="p-1 text-3xl lg:text-2xl rounded-sm cursor-pointer transition bg-gray-200"
                 >
                   <Icon color={color} />

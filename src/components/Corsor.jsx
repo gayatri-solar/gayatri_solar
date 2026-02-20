@@ -32,6 +32,8 @@ const Cursor = () => {
         -translate-y-1/2
         ease-out
         duration-300
+        lg:flex
+        hidden
       "
     />
   );

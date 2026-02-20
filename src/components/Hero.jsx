@@ -8,7 +8,7 @@ const Hero = ({ menu, heroRef, isOpen, setIsOpen }) => {
 
   return (
     <div
-      id="Home"
+      id="home"
       ref={heroRef}
       className="hero-bg relative h-screen bg-cover bg-right"
       style={{
