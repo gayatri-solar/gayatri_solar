@@ -76,7 +76,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
           <img className="hidden lg:block w-48 lg:w-72" src={logo} alt="Gayatri Solar Logo" />
           <img className="w-12 lg:hidden" src={logosm} alt="Gayatri Solar Logo" />
         </div>
-        <ul className="hidden lg:flex gap-8 text-base font-semibold px-12">
+        <ul className="hidden lg:flex gap-5 text-base font-semibold px-12">
           {menu.map((item,idx) => (
             <Link key={idx} to={item.path}>
               <li
