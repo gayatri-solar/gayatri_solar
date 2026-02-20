@@ -19,8 +19,7 @@ import Navbar from './components/Navbar'
 import CallPopup from './components/CallPopup'
 import Corsor from './components/Corsor'
 import Gallery from './pages/Gallery'
-import { useLocation } from "react-router-dom";
-
+ import { useLocation, useNavigate } from "react-router-dom";
 function App() {
   const menu = [
     { name: "Home", path: "/#home" },
@@ -37,16 +36,29 @@ function App() {
   const [showpopup, setShowpopup] = useState(false);
   const [showcallpopup, setShowcallpopup] = useState(false);
 
+ 
+
   function ScrollToHash() {
     const { hash, pathname } = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
-      if (hash && pathname === "/") {
-        const el = document.getElementById(hash.slice(1));
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }
+      if (!hash || pathname !== "/") return;
+
+      const el = document.getElementById(hash.slice(1));
+      if (!el) return;
+
+      const yOffset = -70; // navbar height
+      const y =
+        el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+
+      // ✅ hash remove करा scroll झाल्यावर
+      setTimeout(() => {
+        navigate(pathname, { replace: true });
+      }, 500);
+
     }, [hash, pathname]);
 
     return null;
@@ -89,7 +101,6 @@ function App() {
       <Routes>
         <Route path='/' element={
           <div className='overflow-x-hidden scroll-smooth cursor-default select-none'>
-            <FloatingMenu show={showMenu} isOpen={isOpen} setIsOpen={setIsOpen} />
             <Hero menu={menu} heroRef={heroRef} isOpen={isOpen} setIsOpen={setIsOpen} />
             <Aboutus />
             <Partners />

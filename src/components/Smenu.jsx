@@ -26,21 +26,25 @@ const Smenu = ({ menu, isOpen, setIsOpen }) => {
   }
   return (
     <>
-      <div onClick={handleclose} className={` ${isOpen ? "block" : "hidden"} fixed top-0 left-0 w-full h-screen bg-lime-950/5 z-5 `}>
+      <div onClick={handleclose} className={` ${isOpen ? "block" : "hidden"} text-white fixed top-0 left-0 w-full h-screen bg-lime-950/5 z-5 `}>
 
       </div>
 
       <div className={` ${isOpen ? "" : "border-lime-500 border-l-2"} lg:w-1/4 md:w-[70%] fixed top-0 w-full ${isOpen ? "right-0 " : "-right-full"} z-10 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(190,242,100,0.05)),url('https://images.pexels.com/photos/8853509/pexels-photo-8853509.jpeg?cs=srgb&dl=pexels-cristian-rojas-8853509.jpg&fm=jpg')] bg-cover bg-center duration-800 transition-all h-screen`}>
         <div className="flex justify-between p-8 ">
           <h1 className="text-4xl cursor-pointer font-semibold text-lime-500">Gayatri Solar</h1>
-          <div onClick={handleclose} className="flex justify-center items-center text-3xl">
+          <div onClick={handleclose} className="flex justify-center text-white items-center text-3xl">
             <AiOutlineClose />
           </div>
         </div>
         <div className="flex flex-col justify-between h-[88vh] ">
           <ul>
             {menu.map((item, idx) => (
-              <li key={idx} onClick={() => setIsOpen(false)} className="mx-8 my-6 text-3xl lg:text-2xl active:scale-105 lg:active:scale-100">
+              <li
+                key={idx}
+                onClick={() => setIsOpen(false)}
+                className="mx-8 my-6 text-3xl lg:text-2xl text-white active:scale-105 lg:active:scale-100"
+              >
                 <Link to={item.path}>
                   {item.name}
                 </Link>
