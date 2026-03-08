@@ -54,7 +54,7 @@ const Footer = () => {
                 <h3 className="hidden lg:block">Copyright © 2026 Gayatri Solar. All Rights Reserved.</h3>
                 <h3 className=" lg:hidden ">Copyright © 2026 Gayatri Solar. <br /> All Rights Reserved.</h3>
                     <h3> 
-                        <a onClick={()=> window.open("https://mayurkumawat.me","_blank")}>Code by <span className="cursor-pointer underline"> Mayur Kumawat.</span></a>
+                        <a onClick={()=> window.open("https://mayurkumawat.me","_blank")}>Design & code by <span className="cursor-pointer underline"> Mayur Kumawat.</span></a>
                     </h3>
             </div>
             <div className='hidden lg:flex gap-5 pr-5 lg:justify-end lg:pt-2'>
