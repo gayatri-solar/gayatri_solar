@@ -15,7 +15,7 @@ const Gallery = ({ menu, isOpen, setIsOpen, heroRef }) => {
         <>
             <Navbar menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} className="lg:hidden" />
             <div className='min-h-screen lg:pt-[25vh] text-4xl px-8 py-4 relative'>
-    <h2 className="text-lime-600 mb-2 lg:mb-4 text-3xl lg:text-5xl">
+    <h2 className="text-(--primary-color) mb-2 lg:mb-4 text-3xl lg:text-5xl">
         Our Projects
     </h2>
 

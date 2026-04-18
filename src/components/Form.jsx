@@ -106,7 +106,7 @@ const Form = ({ className, setShowpopup }) => {
             onSubmit={handleSubmit}
             className={`${className} lg:h-fit flex flex-col bg-white/85 text-black p-6 rounded-lg shadow-2xl max-w-md w-full`}
         >
-            <h3 className="text-lime-600">Contact Us</h3>
+            <h3 className="text-(--primary-color)">Contact Us</h3>
             <h2 className="text-3xl mb-4">Get a Free Quote</h2>
 
             {/* Name */}
@@ -116,7 +116,7 @@ const Form = ({ className, setShowpopup }) => {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full p-2 border border-lime-600 rounded "
+                    className="w-full p-2 border border-(--primary-color) rounded "
                 />
                 {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
             </div>
@@ -128,7 +128,7 @@ const Form = ({ className, setShowpopup }) => {
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-                    className="w-full p-2 border border-lime-600 rounded"
+                    className="w-full p-2 border border-(--primary-color) rounded"
                 />
                 {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
             </div>
@@ -140,7 +140,7 @@ const Form = ({ className, setShowpopup }) => {
                     name="SolarType"
                     value={form.SolarType}
                     onChange={handleChange}
-                    className="w-full p-2 border border-lime-600 rounded"
+                    className="w-full p-2 border border-(--primary-color) rounded"
                 >
                     <option value="">Select Solar Type</option>
                     <option value="residential">Residential</option>
@@ -159,7 +159,7 @@ const Form = ({ className, setShowpopup }) => {
                     name="bill"
                     value={form.bill}
                     onChange={handleChange}
-                    className="w-full p-2 border border-lime-600 rounded"
+                    className="w-full p-2 border border-(--primary-color) rounded"
                 />
                 {errors.bill && <p className="text-red-500 text-sm">{errors.bill}</p>}
             </div>
@@ -173,7 +173,7 @@ const Form = ({ className, setShowpopup }) => {
                     type="file"
                     accept=".pdf,image/*"
                     onChange={handleFileChange}
-                    className="w-full p-2 border border-lime-600 rounded"
+                    className="w-full p-2 border border-(--primary-color) rounded"
                 />
                 {errors.file && <p className="text-red-500 text-sm">{errors.file}</p>}
             </div>
@@ -185,11 +185,11 @@ const Form = ({ className, setShowpopup }) => {
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    className="w-full h-20 p-2 border border-lime-600 rounded"
+                    className="w-full h-20 p-2 border border-(--primary-color) rounded"
                 />
             </div>
 
-            <button disabled={uploading} className="w-full bg-lime-600 text-white p-2 rounded hover:bg-lime-800">
+            <button disabled={uploading} className="w-full bg-(--primary-color) text-white p-2 rounded hover:bg-lime-black/90 duration-300">
                 {uploading ? 'Please Wait Bill Uploading...' : 'Submit'}
             </button>
         </form>

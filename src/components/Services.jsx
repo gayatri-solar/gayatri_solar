@@ -44,7 +44,7 @@ const Services = () => {
   return (
     <div id="services" className="bg-white py-2 px-8"> 
       <SEO title="Gayatri Solar" description="Explore our range of solar services including Residential, Commercial, Industrial, Agricultural Solar, Solar Lamps, and Water Solar solutions designed to meet your energy needs sustainably." />
-      <h1 className="text-lime-600 my-5 lg:text-5xl text-3xl">
+      <h1 className="text-(--primary-color) my-5 lg:text-5xl text-3xl">
         Our Services
       </h1>
 
@@ -66,7 +66,7 @@ const Services = () => {
       >
         {services.map((service, idx) => (
           <SwiperSlide key={idx}>
-            <div className="p-2 rounded bg-white border my-1 border-lime-500/50 h-full lg:h-[83vh] ">
+            <div className="p-2 rounded bg-white border my-1 border-(--primary-color)/50 h-full lg:h-[83vh] ">
               
               <div
                 className="h-[35vh] md:h-[40vh] rounded bg-cover bg-center"

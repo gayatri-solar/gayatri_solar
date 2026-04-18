@@ -6,16 +6,16 @@ function Button2({ text, onClick, }) {
         active:scale-105 
         lg:active:scale-100
         relative z-0 inline-block overflow-hidden rounded-full
-        border-2 border-lime-300
+       
         bg-transparent
         px-8 py-3
-        text-base font-bold text-lime-300
+        text-base font-bold text-(--gray)
         transition-all duration-200 ease-in-out
 
         after:absolute after:inset-0
         after:z-[-1]
         after:rounded-full
-        after:bg-green-900
+        after:bg-(--secondory-color)
         after:content-['']
         after:origin-top-left
         after:-translate-x-full

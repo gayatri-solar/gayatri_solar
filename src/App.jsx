@@ -54,13 +54,12 @@ function App() {
 
       window.scrollTo({ top: y, behavior: "smooth" });
 
-      // ✅ hash remove करा scroll झाल्यावर
+
       setTimeout(() => {
         navigate(pathname, { replace: true });
       }, 500);
 
     }, [hash, pathname]);
-
     return null;
   }
 
@@ -96,11 +95,11 @@ function App() {
   return (
     <>
       <Corsor />
-      <Navbar menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} className={"hidden z-50 w-full fixed lg:block"} />
+      <Navbar menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} className={"hidden z-50 w-full fixed lg:block shadow-lg"} />
       <ScrollToHash />
       <Routes>
         <Route path='/' element={
-          <div className='overflow-x-hidden scroll-smooth cursor-default select-none'>
+          <div className='overflow-x-hidden scroll-smooth cursor-default select-none bg-(--bg-color)'>
             <Hero menu={menu} heroRef={heroRef} isOpen={isOpen} setIsOpen={setIsOpen} />
             <Aboutus />
             <Partners />
@@ -114,7 +113,7 @@ function App() {
         } />
         <Route path='/gallery' element={<Gallery heroRef={heroRef} menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} />} />
       </Routes>
-      <Footer />
+      <Footer menu={menu} />
       {showpopup && <SubmitPopup setShowpopup={setShowpopup} />}
       {showcallpopup && <CallPopup setShowcallpopup={setShowcallpopup} setShowpopup={setShowpopup} />}
       {!isOpen && <Wp />}

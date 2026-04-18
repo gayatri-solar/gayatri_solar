@@ -26,13 +26,13 @@ const Smenu = ({ menu, isOpen, setIsOpen }) => {
   }
   return (
     <>
-      <div onClick={handleclose} className={` ${isOpen ? "block" : "hidden"} text-white fixed top-0 left-0 w-full h-screen bg-lime-950/5 z-5 `}>
+      <div onClick={handleclose} className={` ${isOpen ? "block" : "hidden"} text-white fixed top-0 left-0 w-full h-screen bg-black/20 z-5 `}>
 
       </div>
 
-      <div className={` ${isOpen ? "" : "border-lime-500 border-l-2"} lg:w-1/4 md:w-[70%] fixed top-0 w-full ${isOpen ? "right-0 " : "-right-full"} z-10 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(190,242,100,0.05)),url('https://images.pexels.com/photos/8853509/pexels-photo-8853509.jpeg?cs=srgb&dl=pexels-cristian-rojas-8853509.jpg&fm=jpg')] bg-cover bg-center duration-800 transition-all h-screen`}>
+      <div className={` ${isOpen ? "" : "border-(--primary-color) border-l-2"} lg:w-1/4 md:w-[70%] fixed top-0 w-full ${isOpen ? "right-0 " : "-right-full"} z-10 bg-[linear-gradient(rgba(0,0,0,0.7),rgba(190,242,100,0.05)),url('https://images.pexels.com/photos/8853509/pexels-photo-8853509.jpeg?cs=srgb&dl=pexels-cristian-rojas-8853509.jpg&fm=jpg')] bg-cover bg-center duration-800 transition-all h-screen`}>
         <div className="flex justify-between p-8 ">
-          <h1 className="text-4xl cursor-pointer font-semibold text-lime-500">Gayatri Solar</h1>
+          <h1 className="text-4xl cursor-pointer font-semibold text-(--primary-color)">Gayatri Solar</h1>
           <div onClick={handleclose} className="flex justify-center text-white items-center text-3xl">
             <AiOutlineClose />
           </div>
@@ -55,13 +55,13 @@ const Smenu = ({ menu, isOpen, setIsOpen }) => {
             <div onClick={() => {
               window.location.href = "tel:+919075321764";
             }} className="text-white text-xl mb-2 ml-8 cursor-pointer flex items-center gap-2 uppercase">
-              <MdCallEnd color="#89ea5f" />
+              <MdCallEnd color="#fe6700" />
               +91-9075321764
             </div>
             <div onClick={() => {
               window.location.href = "tel:+919764004271";
             }} className=" text-white text-xl mb-4 ml-8 cursor-pointer flex items-center gap-2 uppercase">
-              <MdCallEnd color="#89ea5f" />
+              <MdCallEnd color="#fe6700" />
               +91-9764004271
             </div>
 

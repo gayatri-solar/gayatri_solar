@@ -2,6 +2,13 @@
 
 :root {
     --swiper-navigation-size: 22px;
+    --primary-color: #fe6700;
+    --secondory-color: #b34800;
+    --bg-color: #fffaf6;
+    --gray: #f0f0f0;
+    --gray-2:#656565;
+    --ft-black: #222222;
+    --fts-black:#212529;
 }
 
 .wtsapp {
@@ -42,9 +49,9 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: #f0fdf4;
+    background-color: var(--bg-color) !important;
     border-radius: 50%;
-    color: #84cc16 !important;
+    color: var(--primary-color) !important;
     width: 45px !important;
     height: 45px !important;
     padding: 8px !important;
@@ -57,30 +64,33 @@
 .brands .swiper-wrapper {
     transition-timing-function: linear !important;
 }
-.hero-bg{
+
+.hero-bg {
     background-image: url("./assets/bg/What-are-the-Benefits-of-Solar-Panel-Installation.jpg");
 }
+
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('https://stutitechnologies.com/assets/fonts/fontawesome-webfont.eot?v=4.7.0') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'FontAwesome';
+    src: url('https://stutitechnologies.com/assets/fonts/fontawesome-webfont.eot?v=4.7.0') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .fontawesome {
-  font-family: 'FontAwesome', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'FontAwesome', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 @font-face {
-  font-family: 'Livvic';
-  src: url('http://fonts.gstatic.com/s/livvic/v11/rnCr-x1S2hzjrlfXbeM-.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Livvic';
+    src: url('http://fonts.gstatic.com/s/livvic/v11/rnCr-x1S2hzjrlfXbeM-.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .livvic {
-  font-family: 'Livvic', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Livvic', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 

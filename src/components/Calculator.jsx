@@ -20,20 +20,20 @@ export default function EnergyCalculator() {
 
             {/* Left Section */}
             <div>
-                <p className="text-sm tracking-wide text-lime-950 mb-1">
+                <p className="text-sm tracking-wide text-black mb-1">
                     — Quick Estimate —
                 </p>
-                <h1 className="text-lime-600 mb-5 lg:text-5xl text-3xl">Energy Calculator</h1>
+                <h1 className="text-(--primary-color) mb-5 lg:text-5xl text-3xl">Energy Calculator</h1>
 
                 <div className="relative">
                     <input
                         type="number"
                         value={bill}
                         onChange={(e) => setBill(Number(e.target.value))}
-                        className="w-full border rounded px-5 py-3 text-lg focus:outline-none focus:ring-1 focus:ring-lime-600"
+                        className="w-full border rounded px-5 py-3 text-lg focus:outline-none focus:ring-1 focus:ring-(--primary-color)"
                         placeholder="Enter Bill Amount"
                     />
-                    <span className="absolute right-4 top-1/2 -translate-y-1/2 bg-lime-600 text-white px-3 py-1 rounded-full text-sm">
+                    <span className="absolute right-4 top-1/2 -translate-y-1/2 bg-(--primary-color) text-white px-3 py-1 rounded-full text-sm">
                         ₹
                     </span>
                 </div>
@@ -43,11 +43,11 @@ export default function EnergyCalculator() {
                 </p>
             </div>
 
-            <div className="bg-white rounded-2xl py-8 px-4 grid grid-cols-3 text-center gap-2 shadow-sm w-full">
+            <div className="bg-white rounded-2xl py-8 px-4 grid grid-cols-3 text-center gap-2 shadow-lg shadow-(--gray) border border-(--primary-color)/10 w-full">
 
                 {/* Card 1 */}
                 <div className="flex flex-col items-center justify-center">
-                    <div className="text-lime-600 text-3xl lg:text-5xl mb-2">
+                    <div className="text-(--primary-color) text-3xl lg:text-5xl mb-2">
                         <PiSolarPanel />
                     </div>
                     <p className="font-semibold text-[12px] sm:text-sm">
@@ -59,8 +59,8 @@ export default function EnergyCalculator() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex flex-col items-center justify-center border-x border-lime-200">
-                    <div className="text-lime-600 text-3xl lg:text-5xl mb-2">
+                <div className="flex flex-col items-center justify-center border-x border-(--gray)">
+                    <div className="text-(--primary-color) text-3xl lg:text-5xl mb-2">
                         <MdOutlineCalculate />
                     </div>
                     <p className="font-semibold text-[12px] sm:text-sm">
@@ -73,7 +73,7 @@ export default function EnergyCalculator() {
 
                 {/* Card 3 */}
                 <div className="flex flex-col items-center justify-center">
-                    <div className="text-lime-600 text-3xl lg:text-5xl mb-2">
+                    <div className="text-(--primary-color) text-3xl lg:text-5xl mb-2">
                         <FaClockRotateLeft />
                     </div>
                     <p className="font-semibold text-[12px] sm:text-sm">

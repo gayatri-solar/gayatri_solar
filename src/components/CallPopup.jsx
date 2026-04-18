@@ -70,7 +70,7 @@ const CallPopup = ({ setShowpopup, setShowcallpopup }) => {
                 <div className='flex flex-col'>
                     <label>Name</label>
                     <input
-                        className='h-10 pl-2 border border-lime-500 rounded focus:outline-none'
+                        className='h-10 pl-2 border border-(--primary-color) rounded focus:outline-none'
                         type="text"
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -81,7 +81,7 @@ const CallPopup = ({ setShowpopup, setShowcallpopup }) => {
                 <div className='flex flex-col'>
                     <label>Phone</label>
                     <input
-                        className='h-10 pl-2 border border-lime-500 rounded focus:outline-none'
+                        className='h-10 pl-2 border border-(--primary-color) rounded focus:outline-none'
                         type="tel"
                         maxLength="10"
                         value={form.phone}
@@ -94,7 +94,7 @@ const CallPopup = ({ setShowpopup, setShowcallpopup }) => {
                 <button
                     type="submit"
                     disabled={loading}
-                    className='border border-lime-950 rounded bg-lime-500 py-1 mt-2 disabled:opacity-60'
+                    className='border border-(--secondary-color) rounded bg-(--primary-color) py-1 mt-2 disabled:opacity-60 text-white'
                 >
                     {loading ? 'Sending...' : 'Request Call'}
                 </button>

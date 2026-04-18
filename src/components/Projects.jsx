@@ -19,10 +19,10 @@ const Projects = () => {
         className="bg-white p-8"
       >
         <SEO title="Gayatri Solar" description="Explore Gayatri Solar Nashik's diverse portfolio of solar projects, showcasing our expertise in residential, commercial, industrial, and agricultural solar installations. Discover how we deliver sustainable energy solutions tailored to various needs." />
-        <h2 className="text-lime-600 mb-5 text-3xl lg:text-5xl">
+        <h2 className="text-(--primary-color) mb-5 text-3xl lg:text-5xl">
           Our Projects
         </h2>
-        <p className="text-lime-900 lg:mt-0 mt-4 lg:text-xl text-lg">
+        <p className="text-black lg:mt-0 mt-4 lg:text-xl text-lg">
           Our Projects section highlights a diverse range of successfully
           completed solar installations across residential, commercial,
           industrial, and agricultural sectors. Each project reflects our

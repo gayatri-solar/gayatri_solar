@@ -23,7 +23,7 @@ const Hero = ({ menu, heroRef, isOpen, setIsOpen }) => {
         }}
       ></div>
 
-      <div className="absolute inset-0 bg-linear-to-b from-black/50 to-black/20 lg:bg-black/50 text-white">
+      <div className="absolute inset-0 bg-linear-to-b from-black/50 to-black/20 lg:bg-black/30 text-white">
         <Navbar menu={menu} isOpen={isOpen} setIsOpen={setIsOpen} className="lg:hidden" />
 
         <div className="flex flex-col lg:flex-row items-center justify-center lg:pt-32 px-8">

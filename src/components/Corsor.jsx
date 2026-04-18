@@ -25,7 +25,7 @@ const Cursor = () => {
         fixed
         z-[999]
         w-3 h-3
-        bg-lime-500
+        bg-(--primary-color)
         rounded-full
         pointer-events-none
         -translate-x-1/2

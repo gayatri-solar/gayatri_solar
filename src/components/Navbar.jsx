@@ -3,7 +3,7 @@ import Button1 from "./Button1";
 import { TbMenuDeep } from "react-icons/tb";
 import Smenu from "./Smenu";
 import logo from "../assets/logo.png";
-import logosm from "../assets/android-chrome-512x512.png";
+import logosm from "../assets/apple-touch-icon.png";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
@@ -39,7 +39,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
   const [search, setSearch] = useState("");
   return (
     <div className={`${className}`} >
-      <div className="hidden lg:flex lg:items-center lg:justify-between bg-lime-600 text-white py-1 px-8">
+      <div className="hidden lg:flex lg:items-center lg:justify-between bg-(--primary-color) text-white py-1 px-8">
         <div className="flex gap-4">
           <div className=" flex items-center gap-1 uppercase cursor-pointer">
             <HiMail className="inline mt-1"
@@ -64,14 +64,14 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
           {socials.map(({ name, Icon, color,link }) => (
             <div
               key={name} onClick={()=>(window.open(link, '_blank') )}
-              className="p-1 lg:text-xl rounded-sm cursor-pointer transition bg-lime-50 hover:scale-[1.1]"
+              className="p-1 lg:text-xl rounded-sm cursor-pointer transition bg-(--bg-color) hover:scale-[1.1]"
             >
               <Icon color={color} />
             </div>
           ))}
         </div>
       </div>
-      <div className="bg-lime-50 lg:bg-white flex justify-between items-center text-black px-2 py-3 lg:py-0 lg:px-8 font-bold relative">
+      <div className="bg-(--bg-color) lg:bg-white flex justify-between items-center text-black px-2 py-3 lg:py-0 lg:px-8 font-bold relative">
         <div className="flex justify-center items-center cursor-pointer">
           <img className="hidden lg:block w-48 lg:w-72" src={logo} alt="Gayatri Solar Logo" />
           <img className="w-12 lg:hidden" src={logosm} alt="Gayatri Solar Logo" />
@@ -81,7 +81,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
             <Link key={idx} to={item.path}>
               <li
               key={item.name}
-              className="cursor-pointer text-lime-900 hover:text-lime-600"
+              className="cursor-pointer text-black hover:text-(--primary-color)"
             >
               {item.name}
             </li>
@@ -89,15 +89,15 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
           ))}
 
         </ul>
-        <div className="cursor-pointer text-lime-900 text-nowrap lg:hidden">
-          <div className=" hover:text-lime-600 flex items-center gap-1 text-[4vw] lg:text-lg">
+        <div className="cursor-pointer text-black text-nowrap lg:hidden">
+          <div className=" hover:text-(--primary-color) flex items-center gap-1 text-[4vw] lg:text-lg">
             <MdLocalPhone className="inline"
               onClick={() => {
                 window.location.href = "tel:+919075321764";
               }} />
             <p>+91-9075321764</p>
           </div>
-          <div className=" hover:text-lime-600 flex items-center gap-1 text-[3.3vw] lg:text-[0.95rem]">
+          <div className=" hover:text-(--primary-color) flex items-center gap-1 text-[3.3vw] lg:text-[0.95rem]">
             <IoLocationSharp className="inline text-red-600 " />
             <p>Nashik, Maharashtra</p>
           </div>
@@ -108,7 +108,7 @@ const Navbar = ({ menu, isOpen, setIsOpen, className }) => {
 
         </div>
         <div className="flex justify-center items-center">
-          <Button1 onClick={() => {
+          <Button1 className="shadow-black/30 shadow-lg" onClick={() => {
             window.location.href = "tel:+919075321764";
           }} text={"Call Now"} />
           <div onClick={() => setIsOpen(true)} className="lg:hidden px-2 text-4xl ml-2 -mr-2">

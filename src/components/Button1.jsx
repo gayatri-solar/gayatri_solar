@@ -3,21 +3,22 @@ function Button1({ text, onClick, className = "" }) {
     <button
       onClick={onClick}
       className={` 
+        cursor-pointer
         text-nowrap
         active:scale-105 
         lg:active:scale-100
         relative z-0 inline-block overflow-hidden rounded-full
-        border-2 border-lime-900
-        bg-lime-500
+        border border-(--gray)
+        bg-(--primary-color)
         lg:px-8 lg:py-3
         px-1 py-1
-        text-base font-semibold text-lime-950
+        text-base font-semibold text-(--bg-color)
         transition-all duration-200 ease-in-out
 
         after:absolute after:inset-0
         after:z-[-1]
         after:rounded-full
-        after:bg-lime-300
+        after:bg-(--secondory-color)
         after:content-['']
         after:origin-top-left
         after:-translate-x-full
@@ -25,9 +26,9 @@ function Button1({ text, onClick, className = "" }) {
         after:transition-all
         after:duration-300
         after:ease-out
-        hover:border-lime-950
+        hover:border-(--gray)
 
-        hover:text-lime-950
+        hover:text-(--bg-color)
         hover:after:translate-x-0
         hover:after:rotate-0
 
