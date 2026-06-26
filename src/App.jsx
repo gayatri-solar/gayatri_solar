@@ -115,7 +115,7 @@ function App() {
       </Routes>
       <Footer menu={menu} />
       {showpopup && <SubmitPopup setShowpopup={setShowpopup} />}
-      {showcallpopup && <CallPopup setShowcallpopup={setShowcallpopup} setShowpopup={setShowpopup} />}
+      {/* {showcallpopup && <CallPopup setShowcallpopup={setShowcallpopup} setShowpopup={setShowpopup} />} */}
       {!isOpen && <Wp />}
     </>
 
